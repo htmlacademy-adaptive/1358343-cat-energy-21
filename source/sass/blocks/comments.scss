@@ -5,17 +5,23 @@
 .comments {
   margin-top: 24px;
   padding: 0;
+  margin-left: 0;
 
   @media (min-width: $tablet-width) {
-    margin-top: 65px;
+    margin-top: 89px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 70px;
   }
 }
 
 .comments__title {
   font-size: 24px;
   line-height: 26px;
-  width: 45%;
+  width: 51%;
   margin-bottom: 37px;
+  padding-left: 0;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
@@ -24,6 +30,14 @@
     padding-right: 42px;
     padding-bottom: 0;
     margin-bottom: 76px;
+    padding-left: 39px;
+    margin-right: 447px;
+    margin-top: -24px;
+    background-color: $main-background;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 996px;
   }
 }
 
@@ -34,7 +48,7 @@
   color: $text-color;
   text-transform: uppercase;
   padding-top: 9px;
-  padding-bottom: 125px;
+  padding-bottom: 104px;
   min-height: 150px;
   width: 100%;
   border: 1px solid $border-menu;
@@ -43,8 +57,10 @@
     font-size: 20px;
     line-height: 30px;
     padding-top: 10px;
-    padding-bottom: 134px;
-    padding-left: 19px;
+    padding-bottom: 103px;
+    padding-left: 4px;
     min-height: 174px;
+    margin-left: 40px;
+    width: 89%;
   }
 }

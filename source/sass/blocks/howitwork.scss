@@ -1,10 +1,15 @@
 .howitwork {
-  padding-bottom: 23px;
+  padding-bottom: 0;
 
   background-color: $main-background;
 
   @media (min-width: $tablet-width) {
+    padding-bottom: 10px;
     border-bottom: 1px solid $border-menu;
+  }
+
+  @media (min-width: $desktop-width) {
+    border: none;
   }
 }
 
@@ -16,19 +21,20 @@
 // }
 
 .howitwork__list {
-  padding-top: 39px;
+  padding-top: 37px;
+  padding-bottom: 21px;
 
   @media (min-width: $tablet-width) {
     display: grid;
-
+    padding-top: 33px;
+    padding-bottom: 0;
     grid-template-columns: 1fr 1fr;
   }
 
   @media (min-width: $desktop-width) {
-    display: grid;
+    display: flex;
     justify-content: space-between;
-
-    grid-template-columns: 250px 250px 250px 250px;
+    flex-wrap: wrap;
   }
 }
 
@@ -45,7 +51,7 @@
 
   min-height: 60px;
   margin-bottom: 20px;
-  padding-top: 2px;
+  padding-top: 4px;
   padding-left: 80px;
 
   font-size: 14px;
@@ -56,8 +62,15 @@
   @media (min-width: $tablet-width) {
     min-height: 280px;
 
+    font-size: 16px;
+    line-height: 24px;
     padding: 0;
     padding-top: 151px;
+    margin-bottom: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 250px;
   }
 }
 
@@ -91,6 +104,7 @@
 
   @media (min-width: $desktop-width) {
     margin: 0;
+    background-position: 126px 37px;
   }
 }
 
@@ -100,10 +114,12 @@
     background-repeat: no-repeat;
     background-position: right;
     margin-right: 79px;
+    margin-left: 30px;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
+    background-position: 126px 37px;
   }
 }
 
@@ -112,11 +128,12 @@
     background-image: url("../img/3.svg");
     background-repeat: no-repeat;
     background-position: right;
-    margin-right: 137px;
+    margin-right: 127px;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
+    background-position: 126px 37px;
   }
 }
 
@@ -126,10 +143,12 @@
     background-repeat: no-repeat;
     background-position: right;
     margin-right: 79px;
+    margin-left: 30px;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
+    background-position: 126px 37px;
   }
 }
 

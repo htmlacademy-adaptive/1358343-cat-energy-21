@@ -23,11 +23,11 @@
 }
 
 .main-nav__toggle {
-  width: 24px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   position: absolute;
   top: -40px;
-  right: 20px;
+  right: 36px;
 
   background-color: $main-background;
   border: none;
@@ -70,8 +70,9 @@
   &::after {
     content: "";
     position: absolute;
-    top: 5px;
-    right: 0;
+    top: 33%;
+    left: 50%;
+
     width: 25px;
     height: 2px;
     background-color: $menu-color;
@@ -114,7 +115,7 @@
   width: auto;
   min-height: 66px;
   padding-top: 22px;
-
+  font-family: $font-family;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
@@ -124,14 +125,16 @@
   border-bottom: 1px solid $border-menu;
 
   &:first-child {
-    border-top: 1px solid $border-menu;
+    @media (max-width: $mobile-width-only) {
+      border-top: 1px solid $border-menu;
+    }
   }
 
   @media (min-width: $tablet-width) {
     padding: 0;
     font-size: 18px;
     line-height: 24px;
-    text-align: none;
+    font-weight: 400;
 
     border: none;
   }
@@ -139,6 +142,26 @@
   @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 30px;
+    border-top: none;
+  }
+}
+
+.main-nav__item--form + .main-nav__item--active {
+  @media (min-width: $tablet-width) {
+    min-height: 0;
+    border-bottom: 2px solid $background-button;
+  }
+}
+
+.main-nav__item--active {
+  @media (min-width: $tablet-width) {
+    min-height: 0;
+    border-bottom: 2px solid $background-button;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 0;
+    border-bottom: 2px solid $button-color;
   }
 }
 
@@ -149,9 +172,22 @@
   color: $menu-color;
   letter-spacing: 0.7px;
 
+  @media (min-width: $tablet-width) {
+    letter-spacing: normal;
+  }
+
   @media (min-width: $desktop-width) {
     color: $button-color;
   }
+}
+
+.main-nav__item a:hover {
+  border: none;
+  opacity: 0.6;
+}
+
+.main-nav__item a:active {
+  opacity: 0.3;
 }
 
 .main-nav__item--form a {

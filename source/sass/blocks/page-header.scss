@@ -10,6 +10,14 @@
   justify-content: space-between;
   width: 100%;
   min-height: 66px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+  }
 }
 
 .page-header__logo {
@@ -17,21 +25,33 @@
   align-items: center;
   width: 100%;
   min-height: 66px;
+  margin-left: 20px;
 
   text-align: center;
 
   @media (min-width: $tablet-width) {
     width: 174px;
     height: 52px;
-    margin-top: 24px;
+    margin-top: 18px;
+    margin-left: 0;
     border: none;
   }
 
   @media (min-width: $desktop-width) {
     width: 202px;
     height: 59px;
-    margin-top: 53px;
+    margin-top: 50px;
   }
+}
+
+.page-header__logo:hover {
+  opacity: 0.8;
+  border: none;
+  cursor: pointer;
+}
+
+.page-header__logo:active {
+  opacity: 0.6;
 }
 
 .page-header__logo svg {

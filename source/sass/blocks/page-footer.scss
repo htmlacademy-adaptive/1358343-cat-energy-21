@@ -1,6 +1,10 @@
 .page-footer {
   position: relative;
   background-color: $background-grey;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 6px;
+  }
 }
 
 .page-footer__contacts {
@@ -32,6 +36,10 @@
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
 }
 
 .page-footer__links {
@@ -44,13 +52,18 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 110px;
+  }
 }
 
 .page-footer__title {
   display: block;
   padding-top: 39px;
-  padding-bottom: 32px;
+  padding-bottom: 30px;
   margin: auto;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     padding-top: 60px;
@@ -59,37 +72,10 @@
   }
 }
 
-.page-footer__copyright {
-  width: 100%;
-
-  @media (min-width: $tablet-width) {
-    width: 163px;
-  }
+.page-footer__title:hover {
+  opacity: 0.8;
 }
 
-.copyright__link {
-  width: 281px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
-  margin-top: 22px;
-  margin-bottom: 22px;
-
-  @media (min-width: $tablet-width) {
-    width: 163px;
-    margin-top: 34px;
-  }
-}
-
-.copyright__link img {
-  width: 27px;
-  height: 34px;
-}
-
-.page-footer__htmlacademy {
-  font-size: 16px;
-  line-height: 19px;
-  font-family: $font-family-other;
-  color: $text-color;
+.page-footer__title:active {
+  opacity: 0.6;
 }

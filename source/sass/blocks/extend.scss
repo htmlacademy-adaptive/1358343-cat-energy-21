@@ -3,19 +3,21 @@
 }
 
 .extend {
-  margin-top: 23px;
+  margin-top: 19px;
   padding: 0;
+  margin-left: 0;
 
   @media (min-width: $tablet-width) {
-    margin-top: 65px;
+    margin-top: 84px;
   }
 }
 
 .extend__title {
   font-size: 24px;
   line-height: 26px;
-  width: 50%;
+  width: 59%;
   margin-bottom: 34px;
+  padding-left: 0;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
@@ -23,7 +25,16 @@
     width: auto;
     padding-right: 42px;
     padding-bottom: 0;
-    margin-bottom: 57px;
+    margin-bottom: 55px;
+    padding-left: 39px;
+    margin-right: 447px;
+    margin-top: -24px;
+    background-color: $main-background;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 966px;
+    margin-bottom: 59px;
   }
 }
 
@@ -31,12 +42,12 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  padding-left: 36px;
+  padding-left: 46px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
-    padding-left: 49px;
+    padding-left: 59px;
   }
 }
 
@@ -45,25 +56,31 @@
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 34px;
+  margin-bottom: 39px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 54px;
+    margin-bottom: 16px;
+    padding-left: 40px;
+    padding-top: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 24px;
   }
 }
 
 .extend__item {
   width: 100%;
-  margin-bottom: 13px;
+  margin-bottom: 19px;
   position: relative;
 
   @media (min-width: $tablet-width) {
     width: 50%;
-    margin-bottom: 32px;
+    margin-bottom: 42px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 25%;
+    width: 20%;
   }
 }
 
@@ -78,8 +95,8 @@
 .extend__input + label::before {
   content: "";
   display: inline-block;
-  height: 26px;
-  width: 26px;
+  height: 29px;
+  width: 29px;
   background-color: $main-background;
   position: absolute;
   left: 0;
@@ -93,7 +110,19 @@
   }
 }
 
-.extend__input--checked + label::after {
+.extend__input:hover + label:hover::before {
+  border-color: $radio-hover;
+}
+
+.extend__input:hover + label:active::before {
+  opacity: 0.3;
+}
+
+.extend__item label:active {
+  opacity: 0.3;
+}
+
+.extend__input:checked + label::after {
   content: "";
   display: inline-block;
   height: 14px;

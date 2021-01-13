@@ -6,25 +6,40 @@
   border-top: 2px solid $background-button;
   margin-top: 26px;
   padding: 0;
+  margin-left: 0;
 
   @media (min-width: $tablet-width) {
-    margin-top: 71px;
+    margin-top: 98px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 19px;
   }
 }
 
 .client-contacts__title {
   font-size: 24px;
   line-height: 26px;
-  width: 65%;
+  width: 71%;
   margin-bottom: 35px;
+  margin-left: 0;
+  padding-left: 0;
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
     width: auto;
-    padding-right: 42px;
+    padding-left: 38px;
+    //padding-right: 44px;
+    margin-right: 113px;
     padding-bottom: 0;
     margin-bottom: 76px;
+    margin-top: -24px;
+    background-color: $main-background;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 665px;
   }
 }
 
@@ -33,6 +48,15 @@
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 34px;
+    padding-left: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+  }
 }
 
 .client-contacts__item:last-child {
@@ -46,6 +70,10 @@
   margin-bottom: 14px;
   position: relative;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
   @media (min-width: $desktop-width) {
     width: auto;
     min-width: 569px;
@@ -54,6 +82,7 @@
 
 .client-contacts__label,
 .client-contacts__input {
+  font-family: $font-family;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
@@ -68,6 +97,7 @@
 .client-contacts__input {
   height: 46px;
   border: 1px solid $border-menu;
+  padding-left: 14px;
 
   @media (min-width: $tablet-width) {
     height: 52px;
@@ -75,29 +105,56 @@
   }
 }
 
+.client-contacts__input:hover {
+  border-color: $border-hover;
+}
+
+.client-contacts__input:focus {
+  border: 2px solid $text-color;
+}
+
+.client-contacts__input:invalid {
+  border: 2px solid $border-error;
+}
+
 .client-contacts__label::before {
   content: "";
   position: absolute;
   width: 20px;
-  right: 10px;
-  top: 15px;
+  //right: 10px;
+  //top: 15px;
 }
 
 .client-contacts__label--email::before {
   height: 14px;
+  right: 13px;
+  top: 16px;
   background-image: url("../img/icon_email.svg");
+
+  @media (min-width: $tablet-width) {
+    right: 17px;
+    top: 18px;
+  }
 }
 
 .client-contacts__label--phone::before {
   height: 20px;
+  right: 11px;
+  top: 12px;
   background-image: url("../img/phone.svg");
+
+  @media (min-width: $tablet-width) {
+    right: 16px;
+    top: 16px;
+  }
 }
 
 .client-contacts__label {
-  padding-top: 15px;
-  padding-right: 9px;
+  padding-top: 11px;
+  padding-right: 11px;
 
   @media (min-width: $tablet-width) {
     padding-top: 10px;
+    padding-right: 20px;
   }
 }

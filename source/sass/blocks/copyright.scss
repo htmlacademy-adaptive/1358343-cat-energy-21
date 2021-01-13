@@ -1,0 +1,47 @@
+.copyright {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 163px;
+  }
+}
+
+.copyright__link {
+  width: 281px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 13px auto;
+  //margin-top: 22px;
+  //margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    width: 163px;
+    margin-top: 10px;
+  }
+}
+
+.copyright__link img {
+  width: 27px;
+  height: 34px;
+}
+
+.copyright__link:hover svg {
+  stroke: $background-button;
+}
+
+.copyright__link:active path {
+  fill: $background-button;
+}
+
+.copyright__link:active p,
+.copyright__link:active svg {
+  opacity: 0.3;
+}
+
+.copyright__htmlacademy {
+  font-size: 16px;
+  line-height: 19px;
+  font-family: $font-family-other;
+  color: $text-color;
+}

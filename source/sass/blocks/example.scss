@@ -1,10 +1,12 @@
 .example {
-  padding-top: 26px;
-  padding-bottom: 32px;
+  padding-top: 28px;
+  padding-bottom: 33px;
 
   background-color: $background-dark-grey;
 
   @media (min-width: $tablet-width) {
+    padding-top: 42px;
+    padding-bottom: 70px;
     background-color: $main-background;
   }
 
@@ -12,6 +14,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 56px;
   }
 }
 
@@ -24,19 +27,24 @@
 }
 
 .example__block {
-  padding-top: 19px;
+  padding-top: 18px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 48px;
+  }
 
   @media (min-width: $desktop-width) {
     display: flex;
     flex-direction: column;
     max-width: 436px;
+    padding-top: 0;
   }
 }
 
 .example__title {
   @media (min-width: $desktop-width) {
     width: 100%;
-    margin-bottom: 146px;
+    margin-bottom: 132px;
   }
 }
 // .example__title {
@@ -46,12 +54,19 @@
 // }
 
 .example__description {
-  padding-left: 1px;
+  //padding-left: 1px;
 
   font-size: 14px;
   line-height: 18px;
   font-family: $font-family-other;
   color: $text-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    //margin: 0;
+    max-width: 700px;
+  }
 }
 
 .example__list {
@@ -59,6 +74,15 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 11px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 37px;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 54px;
+  }
 }
 
 .example__item {
@@ -76,6 +100,7 @@
   @media (min-width: $tablet-width) {
     width: 162px;
     min-height: 75px;
+    margin-right: 42px;
   }
 }
 
@@ -91,16 +116,28 @@
   border: none;
 
   @media (min-width: $tablet-width) {
-    width: auto;
+    padding-top: 12px;
     font-size: 20px;
+    margin-right: 0;
+    margin-left: auto;
+    width: 174px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    padding-left: 0;
+    padding-top: 37px;
+    display: flex;
+    justify-content: space-between;
+    width: 326px;
   }
 }
 
 .example__item-last span {
   @media (min-width: $tablet-width) {
-    position: absolute;
-    top: 40px;
-    right: 0;
+    display: inline-block;
+    padding-bottom: 8px;
   }
 }
 
@@ -138,7 +175,8 @@
     font-size: 14px;
     line-height: 14px;
     width: 127px;
-    bottom: -20px;
+    bottom: -17px;
+    left: 10%;
   }
 }
 
@@ -151,24 +189,61 @@
 
 .example__live {
   display: block;
-  max-width: 690px;
-  padding-top: 59px;
+  //max-width: 690px;
+  margin: auto;
+  padding-top: 42px;
 
   @media (min-width: $desktop-width) {
     position: absolute;
     margin: 0;
-    top: 0;
-    right: 0;
+    top: -116px;
+    right: -41px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    right: 110px;
+    bottom: 0;
+
+    width: 650px;
+    height: 595px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.example__live img {
+  width: 312px;
+  margin-left: -20px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    height: auto;
+    margin: 0;
   }
 }
 
 .example__range {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 30px;
+  padding-top: 31px;
+  padding-left: 4px;
 
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-top: -67px;
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 0 auto;
+    width: 573px;
+    padding-top: 20px;
+  }
 }
 
 .example__range input {
@@ -184,33 +259,67 @@
   border-radius: 6px;
 
   @media (min-width: $tablet-width) {
-    width: 478px;
+    width: 428px;
     height: 6px;
     background-color: $range-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 22px;
   }
 }
 
 .example__range-toggle {
   position: absolute;
-  top: -10px;
-  left: 30px;
-  width: 4px;
-  height: 4px;
-  padding: 0;
-  border: 8px solid $button-color;
+  width: 35px;
+  height: 6px;
   background-color: $background-button;
-  border-radius: 50%;
-  box-shadow: 0 1px 3px 0 $menu-color;
+  border-radius: 6px;
+  top: 3px;
+  left: 4px;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 13px solid $main-background;
+    background-color: $background-button;
+    box-shadow: 0 1px 3px $shadow;
+    left: 197px;
+    top: -15px;
+
+    &:hover {
+      box-shadow: 0 2px 4px $shadow;
+    }
+
+    &:active {
+      box-shadow: 0 0 0 1px $background-button, 0 3px 5px $shadow;
+    }
+  }
 }
 
 .example__range-text {
   padding: 0 17px;
-
+  border-bottom: 1px dotted $border-menu;
   text-transform: uppercase;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    padding: 0 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+
+  &:hover {
+    border-bottom: 1px solid $border-menu;
+  }
+
+  &:active {
+    border: none;
   }
 }

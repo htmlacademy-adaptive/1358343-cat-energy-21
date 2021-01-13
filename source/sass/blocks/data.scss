@@ -5,12 +5,21 @@
 
   padding: 0;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 110px;
+  }
 }
 
 .data__legend {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  padding-left: 0;
   padding-top: 37px;
   padding-bottom: 39px;
 
@@ -22,14 +31,20 @@
     padding-top: 54px;
     padding-bottom: 66px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 60%;
+    padding-top: 56px;
+  }
 }
 
 .data__list {
   border-bottom: 1px solid $border-programs;
-  padding-bottom: 13px;
+  padding-bottom: 8px;
   width: 100%;
 
   @media (min-width: $tablet-width) {
+    border: 0;
     padding-bottom: 52px;
   }
 
@@ -72,9 +87,27 @@
   width: auto;
   padding-right: 14px;
   padding-top: 14px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 19px;
+    padding-top: 10px;
+  }
 }
 
 .data__input {
+  font-family: $font-family;
   border: 1px solid $border-menu;
   padding-left: 15px;
+}
+
+.data__input:hover {
+  border-color: $border-hover;
+}
+
+.data__input:focus {
+  border: 2px solid $text-color;
+}
+
+.data__input:invalid {
+  border: 2px solid $border-error;
 }

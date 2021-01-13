@@ -12,7 +12,7 @@
 
 <body class="page-body">
   <header class="page-header">
-    <div class="page-header__wrapper wrapper">
+    <div class="page-header__wrapper">
       <a class="page-header__logo" href="index.html">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
@@ -45,84 +45,97 @@
   </header>
 
   <main class="page-form">
-    <form class="form wrapper" action="https://echo.htmlacademy.ru" method="post">
-      <h1 class="form__title">Подбор программы</h1>
-      <fieldset class="data">
-        <legend class="data__legend">Заполните анкету, и мы подберем программу&nbsp;питания для вашего кота</legend>
-        <ul class="data__list list-style">
-          <li class="data__item">
-            <label class="data__label" for="name">ИМЯ:*</label>
-            <input class="data__input" type="text" name="name" id="name" value="Барсик" required>
-          </li>
-          <li class="data__item">
-            <label class="data__label" for="weight">Вес (кг):*</label>
-            <input class="data__input" type="number" name="weight" id="weight" value="7" required>
-          </li>
-          <li class="data__item">
-            <label class="data__label" for="age">Возраст&nbsp;(лет):</label>
-            <input class="data__input" type="number" name="age" id="age" value="7">
-          </li>
-        </ul>
+    <h1 class="form__title">Подбор программы</h1>
+    <p class="data__legend">Заполните анкету, и мы подберем программу&nbsp;питания для вашего кота</p>
+    <form class="form" action="https://echo.htmlacademy.ru" method="post">
 
-      <div class="programs-choice">
-        <legend class="visually-hidden">Выбор программы</legend>
-        <ul class="programs-choice__list list-style">
-          <li class="programs-choice__item">
-            <input class="programs-choice__input programs-choice__input--checked" name="program" type="radio" value="lower" id="input-lower" checked>
-            <label for="input-lower">Похудение</label>
-          </li>
-          <li class="programs-choice__item">
-            <input class="programs-choice__input" name="program" type="radio" value="higher" id="input-higher">
-            <label for="input-higher">Набор массы</label>
-          </li>
-          <li class="programs-choice__item">
-            <input class="programs-choice__input" name="program" type="radio" value="unknown" id="input-unknown">
-            <label for="input-unknown">Не знаю (Нужен ваш совет)</label>
-          </li>
-        </ul>
+      <div class="wrapper">
+        <fieldset class="data">
+
+          <ul class="data__list list-style">
+            <li class="data__item">
+              <label class="data__label" for="name">ИМЯ:*</label>
+              <input class="data__input" type="text" name="name" id="name" value="Барсик" required>
+            </li>
+            <li class="data__item">
+              <label class="data__label" for="weight">Вес (кг):*</label>
+              <input class="data__input" type="number" name="weight" id="weight" value="7" required>
+            </li>
+            <li class="data__item">
+              <label class="data__label" for="age">Возраст&nbsp;(лет):</label>
+              <input class="data__input" type="number" name="age" id="age" value="7">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="programs-choice">
+          <legend class="visually-hidden">Выбор программы</legend>
+          <ul class="programs-choice__list list-style">
+            <li class="programs-choice__item">
+              <input class="programs-choice__input programs-choice__input--checked" name="program" type="radio" checked value="lower" id="input-lower" >
+              <label for="input-lower">Похудение</label>
+            </li>
+            <li class="programs-choice__item">
+              <input class="programs-choice__input" name="program" type="radio" value="higher" id="input-higher">
+              <label for="input-higher">Набор массы</label>
+            </li>
+            <li class="programs-choice__item">
+              <input class="programs-choice__input" name="program" type="radio" value="unknown" id="input-unknown">
+              <label for="input-unknown">Не знаю (Нужен ваш совет)</label>
+            </li>
+          </ul>
+        </fieldset>
+        </fieldset>
       </div>
-      </fieldset>
+
       <fieldset class="client-contacts">
-        <legend class="client-contacts__title">Контактные данные (владельца кота)</legend>
-        <ul class="client-contacts__list list-style">
-          <li class="client-contacts__item">
-            <label class="client-contacts__label client-contacts__label--email" for="email">E-mail:*</label>
-            <input class="client-contacts__input" type="email" name="email" id="email" value="kuklachev@gmail.com" required>
-          </li>
-          <li class="client-contacts__item">
-            <label class="client-contacts__label client-contacts__label--phone" for="phone">Телефон:*</label>
-            <input class="client-contacts__input" type="tel" name="phone" id="phone" value="8 (960) 900-60-90" required>
-          </li>
-        </ul>
+        <div class="wrapper">
+          <legend class="client-contacts__title">Контактные данные (владельца кота)</legend>
+          <ul class="client-contacts__list list-style">
+            <li class="client-contacts__item">
+              <label class="client-contacts__label client-contacts__label--email" for="email">E-mail:*</label>
+              <input class="client-contacts__input" type="email" name="email" id="email" value="kuklachev@gmail.com" required>
+            </li>
+            <li class="client-contacts__item">
+              <label class="client-contacts__label client-contacts__label--phone" for="phone">Телефон:*</label>
+              <input class="client-contacts__input" type="tel" name="phone" id="phone" value="8 (960) 900-60-90" required>
+            </li>
+          </ul>
+        </div>
+
       </fieldset>
 
       <fieldset class="comments">
-        <legend class="comments__title">Комментарий</legend>
-          <textarea class="comments__input">
-            Расскажите обо всех повадках кота
-          </textarea>
+        <div class="wrapper">
+          <legend class="comments__title">Комментарий</legend>
+            <textarea class="comments__input">   Расскажите обо всех повадках кота
+            </textarea>
+        </div>
+
       </fieldset>
 
       <fieldset class="extend">
-        <legend class="extend__title">Дополнительно</legend>
-        <ul class="extend__list list-style">
-          <li class="extend__item">
-            <input class="extend__input extend__input--checked" type="checkbox" name="altsugar" id="altsugar" checked>
-            <label class="extend__label" for="altsugar">Сахарозаменитель</label>
-          </li>
-          <li class="extend__item">
-            <input class="extend__input" type="checkbox" name="water" id="water">
-            <label class="extend__label" for="water">Питьевая вода</label>
-          </li>
-          <li class="extend__item">
-            <input class="extend__input" type="checkbox" name="milk" id="milk">
-            <label class="extend__label" for="Milk">Молоко</label>
-          </li>
-          <li class="extend__item">
-            <input class="extend__input" type="checkbox" name="vitamin" id="vitamin">
-            <label class="extend__label" for="vitamin">Витамины</label>
-          </li>
-        </ul>
+        <div class="wrapper">
+          <legend class="extend__title">Дополнительно</legend>
+          <ul class="extend__list list-style">
+            <li class="extend__item">
+              <input class="extend__input extend__input--checked" type="checkbox" name="altsugar" id="altsugar" checked>
+              <label class="extend__label" for="altsugar">Сахарозаменитель</label>
+            </li>
+            <li class="extend__item">
+              <input class="extend__input" type="checkbox" name="water" id="water">
+              <label class="extend__label" for="water">Питьевая вода</label>
+            </li>
+            <li class="extend__item">
+              <input class="extend__input" type="checkbox" name="milk" id="milk">
+              <label class="extend__label" for="milk">Молоко</label>
+            </li>
+            <li class="extend__item">
+              <input class="extend__input" type="checkbox" name="vitamin" id="vitamin">
+              <label class="extend__label" for="vitamin">Витамины</label>
+            </li>
+          </ul>
+        </div>
+
       </fieldset>
 
       <div class="form-button">
@@ -135,11 +148,11 @@
 
   <footer class="page-footer">
     <div class="page-footer__contacts contacts contacts--form wrapper">
-      <p class="contacts__slogan"><b>приглашаем к&nbsp;сотрудничеству дилеров!</b></p>
+      <p class="contacts__slogan">приглашаем к&nbsp;сотрудничеству дилеров!</p>
       <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
     </div>
     <div class="page-footer__map">
-      <!--<img src="https://via.placeholder.com/150x150" alt="Карта проезда">-->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4382.7567246164945!2d30.322359218836958!3d59.93794329729201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1609849353192!5m2!1sru!2sru" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
     <div class="page-footer__links wrapper">
       <a class="page-footer__title" aria-label="CAT ENERGY">
@@ -149,22 +162,22 @@
         <ul class="social__list list-style">
           <li class="social__item">
             <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Мы в Вконтакте">
-              <svg width="23" height="16" viewBox="0 0 23 16" fill="none">
+              <svg width="100%" height="100%" viewBox="0 0 23 16">
                 <use xlink:href="#icon-vkontakte"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фейсбуке">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                <use xlink:href="#icon-facebook"></use>
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Мы в Инстаграме">
+              <svg width="100%" height="100%" viewBox="0 0 16 16" fill="none">
+                <use xlink:href="#icon-instagram"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy" aria-label="Мы в Инстаграме">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <use xlink:href="#icon-instagram"></use>
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фейсбуке">
+              <svg width="100%" height="100%" viewBox="0 0 23 16">
+                <use xlink:href="#icon-facebook"></use>
               </svg>
             </a>
           </li>
@@ -172,8 +185,8 @@
       </div>
       <div class="page-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <p class="page-footer__htmlacademy">HTML Academy</p>
-          <svg width="27" height="34" viewBox="0 0 27 34" fill="none">
+          <p class="copyright__htmlacademy">HTML Academy</p>
+          <svg width="27" height="34" viewBox="0 0 27 34">
             <use xlink:href="#html-academy"></use>
           </svg>
         </a>

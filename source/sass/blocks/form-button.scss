@@ -1,36 +1,57 @@
 .form-button {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 32px;
+  margin-bottom: 29px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 72px;
+    margin-bottom: 78px;
+    margin-left: 72px;
   }
 
   @media (min-width: $desktop-width) {
-    justify-content: space-between;
+    margin-left: 111px;
   }
 }
 
 .form-button__button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  font-family: $font-family;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    padding-left: 63px;
+    padding-right: 65px;
+    padding-top: 12px;
+    padding-bottom: 9px;
+  }
+
   @media (min-width: $desktop-width) {
-    min-width: 568px;
+    padding-left: 207px;
+    padding-right: 207px;
   }
 }
 
 .form-button__text {
+  font-family: $font-family-other;
+  letter-spacing: -1px;
   width: 100%;
   text-align: center;
-  margin-top: 21px;
+  margin-top: 14px;
   margin-bottom: 0;
 
   @media (min-width: $tablet-width) {
-    width: 50%;
-    padding-bottom: 17px;
+    width: 43%;
+    padding-bottom: 13px;
+    margin-top: 10px;
     font-size: 16px;
+    letter-spacing: 0;
+    //padding-left: 17px;
   }
 
   @media (min-width: $desktop-width) {
     text-align: left;
+    margin-left: 83px;
   }
 }
